@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration Loader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="btn">
+
+        <button id="startButton">Start Migration</button>
+
+    </div>
+    
+
+    <div id="offcanvas" class="offcanvas">
+        <div class="toggle-button" id="toggleButton">▼</div>
+        <div class="offcanvas-content">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket.png" alt="icon">
+            </div>
+
+            <div class="progress">
+
+                <div class="progressBox">
+
+                    <div class="message">Migrating Data to selected environment</div>
+                    <div id="progressPercent" class="progress-percent">0%</div>
+
+                </div>
+
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+            </div>
+           
+            
+
+            
+        </div>
+    </div>
+
+    <div id="successPopup" class="success-popup hidden">
+        <div class="popup-icon">✔️</div>
+        <div class="popup-content">
+            <strong>Success</strong>
+            <p>Migration applied successfully.</p>
+        </div>
+        <div class="popup-close" id="popupClose">✖️</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

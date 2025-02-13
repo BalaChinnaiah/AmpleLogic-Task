@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.btn
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 18%;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.toggle-button {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.offcanvas-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    padding: 7px;
+    border-radius: 10px;
+
+}
+
+.message {
+    font-size: 14px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.progress-container {
+    width: 100%%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #007bff;
+    transition: width 0.2s ease;
+}
+
+.progress
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+
+.progressBox
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-percent {
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+    width: 50px;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 15;
+}
+
+.success-popup.show {
+    opacity: 1;
+}
+
+.popup-icon {
+    font-size: 20px;
+}
+
+.popup-content {
+    flex-grow: 1;
+}
+
+.popup-close {
+    cursor: pointer;
+    font-size: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Media Queries  */
+@media only screen and (max-width: 768px)
+{
+    .offcanvas-content
+    {
+        width: auto;
+        gap : 5px;
+    }
+
+    .icon img 
+    {
+        height: 12px;
+        width: 12px;
+        margin-left: -10px;
+    }
+
+    .message
+    {
+        font-size: 10px;
+
+    }
+
+    .progress-percent
+    {
+        margin-right: 20px;
+    }
+
+    .progress-container
+    {
+        width: 80%;
+    }
+
+    .toggle-button
+    {
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+
+    .success-popup
+    {
+        padding: 10px 20px;
+        width: auto;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .btn
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 100%;
+
+    }
+}
